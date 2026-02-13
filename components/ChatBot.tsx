@@ -33,24 +33,29 @@ export default function ChatBot() {
 
   return (
     <>
-      {/* Floating Button */}
+      {/* Floating Chat Button */}
       <button
         onClick={handleOpen}
-        className="fixed bottom-6 right-6 bg-rose-700 text-white w-14 h-14 rounded-full shadow-lg hover:bg-rose-800 transition flex items-center justify-center text-xl"
+        className="fixed bottom-24 right-6 bg-rose-700 text-white w-14 h-14 rounded-full shadow-lg hover:bg-rose-800 transition flex items-center justify-center text-xl z-50"
       >
         💬
       </button>
 
       {/* Chat Box */}
       {open && (
-        <div className="fixed bottom-24 right-6 w-80 max-w-[90%] bg-white border rounded-2xl shadow-2xl flex flex-col overflow-hidden">
+        <div className="fixed bottom-40 right-6 w-80 max-w-[90%] bg-white border rounded-2xl shadow-2xl flex flex-col overflow-hidden z-50">
 
           {/* Header */}
           <div className="bg-rose-700 text-white p-4 flex justify-between items-center">
             <h3 className="font-semibold text-sm">
               Shubh Milan Assistant
             </h3>
-            <button onClick={() => setOpen(false)}>✕</button>
+            <button
+              onClick={() => setOpen(false)}
+              className="text-white text-sm"
+            >
+              ✕
+            </button>
           </div>
 
           {/* Messages */}
