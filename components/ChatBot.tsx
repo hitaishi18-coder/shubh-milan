@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { botData } from "../data/botData";
 
 export default function ChatBot() {
@@ -10,18 +10,16 @@ export default function ChatBot() {
   >([]);
   const [typing, setTyping] = useState(false);
 
-  // Auto open after 5 seconds
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setOpen(true);
+  const handleOpen = () => {
+    setOpen(!open);
+
+    if (!open && messages.length === 0) {
       setMessages([
         { type: "bot", text: "Namaste 👋 Welcome to Shubh Milan." },
         { type: "bot", text: "How can we help you today?" },
       ]);
-    }, 5000);
-
-    return () => clearTimeout(timer);
-  }, []);
+    }
+  };
 
   const handleQuestionClick = (question: string, answer: string) => {
     setMessages((prev) => [...prev, { type: "user", text: question }]);
@@ -30,34 +28,37 @@ export default function ChatBot() {
     setTimeout(() => {
       setTyping(false);
       setMessages((prev) => [...prev, { type: "bot", text: answer }]);
-    }, 1000);
+    }, 800);
   };
 
   return (
     <>
-      {/* Toggle Button */}
+      {/* Floating Button */}
       <button
-        onClick={() => setOpen(!open)}
-        className="fixed bottom-20 right-6 bg-rose-700 text-white px-4 py-3 rounded-2xl shadow-lg hover:bg-rose-800 transition"
+        onClick={handleOpen}
+        className="fixed bottom-6 right-6 bg-rose-700 text-white w-14 h-14 rounded-full shadow-lg hover:bg-rose-800 transition flex items-center justify-center text-xl"
       >
-        Chat
+        💬
       </button>
 
       {/* Chat Box */}
       {open && (
-        <div className="fixed bottom-36 right-6 w-80 bg-white border rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-fadeIn">
+        <div className="fixed bottom-24 right-6 w-80 max-w-[90%] bg-white border rounded-2xl shadow-2xl flex flex-col overflow-hidden">
 
           {/* Header */}
-          <div className="bg-rose-700 text-white p-4">
-            <h3 className="font-semibold">Shubh Milan Assistant</h3>
+          <div className="bg-rose-700 text-white p-4 flex justify-between items-center">
+            <h3 className="font-semibold text-sm">
+              Shubh Milan Assistant
+            </h3>
+            <button onClick={() => setOpen(false)}>✕</button>
           </div>
 
           {/* Messages */}
-          <div className="flex-1 p-4 space-y-3 overflow-y-auto bg-gray-50">
+          <div className="flex-1 p-4 space-y-3 overflow-y-auto bg-gray-50 max-h-64">
             {messages.map((msg, index) => (
               <div
                 key={index}
-                className={`text-sm p-2 rounded-lg max-w-[75%] ${
+                className={`text-xs p-2 rounded-lg max-w-[75%] ${
                   msg.type === "user"
                     ? "bg-rose-200 ml-auto"
                     : "bg-white border"
@@ -68,7 +69,7 @@ export default function ChatBot() {
             ))}
 
             {typing && (
-              <div className="text-sm p-2 bg-white border rounded-lg w-fit">
+              <div className="text-xs p-2 bg-white border rounded-lg w-fit">
                 Typing...
               </div>
             )}
