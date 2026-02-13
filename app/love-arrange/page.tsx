@@ -1,9 +1,17 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Love to Arrange Marriage | Shubh Milan Amritsar",
+  description:
+    "Shubh Milan helps couples in Amritsar convert love marriages into family-approved arranged marriages with confidential counselling and guidance.",
+};
+
 export default function LoveArrange() {
   return (
     <div className="max-w-5xl mx-auto px-6 py-16">
 
       <h1 className="text-4xl font-bold text-rose-800 mb-6">
-        Love to Arrange
+        Love to Arrange Marriage in Amritsar
       </h1>
 
       <p className="text-gray-700 leading-7 mb-6">
@@ -12,8 +20,9 @@ export default function LoveArrange() {
       </p>
 
       <p className="text-gray-700 leading-7 mb-10">
-        Shubh Milan respectfully helps in presenting such relationships
-        to families and guiding them towards acceptance and traditional marriage.
+        Shubh Milan helps couples in Amritsar respectfully present
+        their relationship to families and guide them toward
+        a traditional arranged marriage.
       </p>
 
       <div className="grid md:grid-cols-2 gap-10">

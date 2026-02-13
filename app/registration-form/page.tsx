@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Matrimonial Registration Form | Shubh Milan Amritsar",
+  description:
+    "Complete the matrimonial registration form to connect with trusted and verified marriage profiles in Amritsar.",
+};
+
 export default function RegistrationForm() {
   return (
     <div className="max-w-6xl mx-auto px-6 py-16">

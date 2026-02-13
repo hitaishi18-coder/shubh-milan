@@ -1,14 +1,22 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Shubh Milan | Marriage Bureau in Amritsar",
+  description:
+    "Contact Shubh Milan, a trusted marriage bureau in Amritsar for matrimonial registration and love-to-arrange consultation.",
+};
+
 export default function Contact() {
   return (
     <div className="max-w-5xl mx-auto px-6 py-16">
 
       <h1 className="text-4xl font-bold text-rose-800 mb-8">
-        Contact Us
+        Contact Shubh Milan – Marriage Bureau in Amritsar
       </h1>
 
       <p className="text-gray-700 mb-10">
-        For registration, profile verification or consultation,
-        feel free to reach out to us.
+        For matrimonial registration, profile verification or love-to-arrange
+        consultation in Amritsar, feel free to contact us.
       </p>
 
       <div className="grid md:grid-cols-2 gap-10">
@@ -31,7 +39,7 @@ export default function Contact() {
           </p>
 
           <p className="text-gray-600">
-            📍 Location: Amritsar & Nearby Areas
+            📍 Location: Amritsar, Punjab
           </p>
         </div>
 

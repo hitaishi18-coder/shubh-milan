@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Shubh Milan | Trusted Matrimonial Service in Amritsar",
+  description:
+    "Shubh Milan is a trusted matrimonial service in Amritsar helping Punjabi families find verified marriage matches with tradition and personal guidance.",
+};
+
 export default function Home() {
   return (
     <main className="bg-gradient-to-b from-rose-50 to-white">
@@ -5,13 +13,13 @@ export default function Home() {
       {/* Hero Section */}
       <section className="flex flex-col items-center justify-center text-center px-6 py-24">
         <h1 className="text-5xl font-bold text-rose-800">
-          Shubh Milan
+          Shubh Milan – Matrimonial Service in Amritsar
         </h1>
 
         <p className="mt-6 text-xl text-gray-700 max-w-2xl">
           Vishwas ke saath rishton ka milan.
-          A trusted family-run matrimonial service
-          helping families find suitable life partners.
+          Shubh Milan is a trusted family-run matrimonial service in Amritsar
+          helping families find verified and compatible life partners.
         </p>
 
         <div className="mt-8 flex gap-4">
@@ -41,28 +49,30 @@ export default function Home() {
 
           <div className="p-6 border rounded-lg shadow-sm text-center">
             <h3 className="text-xl font-semibold text-rose-700 mb-4">
-              Verified Profiles
+              Verified Matrimonial Profiles
             </h3>
             <p className="text-gray-600">
-              Every profile is personally reviewed and verified.
+              Every matrimonial profile is personally reviewed and verified
+              to ensure trust and authenticity.
             </p>
           </div>
 
           <div className="p-6 border rounded-lg shadow-sm text-center">
             <h3 className="text-xl font-semibold text-rose-700 mb-4">
-              Personal Guidance
+              Personal Matchmaking Guidance
             </h3>
             <p className="text-gray-600">
-              We guide families throughout the entire process.
+              We guide families throughout the entire marriage process
+              with care and traditional values.
             </p>
           </div>
 
           <div className="p-6 border rounded-lg shadow-sm text-center">
             <h3 className="text-xl font-semibold text-rose-700 mb-4">
-              Complete Privacy
+              Complete Privacy & Confidentiality
             </h3>
             <p className="text-gray-600">
-              Your information is handled with utmost confidentiality.
+              Your personal information is handled with utmost confidentiality.
             </p>
           </div>
 
@@ -72,7 +82,7 @@ export default function Home() {
       {/* Final CTA Section */}
       <section className="bg-rose-100 py-16 text-center">
         <h2 className="text-3xl font-bold text-rose-800 mb-6">
-          Start Your Journey Today
+          Start Your Matrimonial Journey Today
         </h2>
 
         <a
