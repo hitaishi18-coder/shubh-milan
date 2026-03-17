@@ -1,63 +1,66 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Love to Arrange Marriage | Shubh Milan Amritsar",
   description:
-    "Shubh Milan helps couples in Amritsar convert love marriages into family-approved arranged marriages with confidential counselling and guidance.",
+    "Shubh Milan helps couples in Amritsar convert love marriages into family-approved arranged marriages with confidential counselling.",
 };
 
 export default function LoveArrange() {
   return (
-    <div className="max-w-5xl mx-auto px-6 py-16">
+    <div className="max-w-5xl mx-auto px-6 pt-32 pb-16">
 
-      <h1 className="text-4xl font-bold text-rose-800 mb-6">
-        Love to Arrange Marriage in Amritsar
-      </h1>
+      <div className="text-center mb-16">
+        <h1 className="text-4xl md:text-5xl font-bold text-main mb-6">
+          Love to Arrange Marriage
+        </h1>
+        <p className="text-muted text-lg leading-relaxed max-w-3xl mx-auto">
+          Sometimes relationships begin with mutual understanding, but families may need guidance. We help couples respectfully present their relationship to families and guide them toward a traditional marriage.
+        </p>
+      </div>
 
-      <p className="text-gray-700 leading-7 mb-6">
-        Sometimes relationships begin with mutual understanding,
-        but families may need guidance and reassurance.
-      </p>
+      <div className="grid md:grid-cols-2 gap-8 items-center">
 
-      <p className="text-gray-700 leading-7 mb-10">
-        Shubh Milan helps couples in Amritsar respectfully present
-        their relationship to families and guide them toward
-        a traditional arranged marriage.
-      </p>
-
-      <div className="grid md:grid-cols-2 gap-10">
-
-        <div className="p-6 border rounded-lg shadow-sm">
-          <h2 className="text-xl font-semibold text-rose-700 mb-3">
+        <div className="p-10 bg-surface rounded-[2.5rem]">
+          <h2 className="text-2xl font-bold text-main mb-6">
             What We Offer
           </h2>
-          <ul className="text-gray-600 space-y-2">
-            <li>✔️ Confidential Consultation</li>
-            <li>✔️ Family Counselling</li>
-            <li>✔️ Respectful Communication</li>
-            <li>✔️ Traditional Marriage Process</li>
+          <ul className="space-y-4 text-lg text-muted">
+            <li className="flex items-center gap-3">
+              <span className="text-primary">✓</span> Confidential Consultation
+            </li>
+            <li className="flex items-center gap-3">
+              <span className="text-primary">✓</span> Family Counselling & Mediation
+            </li>
+            <li className="flex items-center gap-3">
+              <span className="text-primary">✓</span> Respectful Communication
+            </li>
+            <li className="flex items-center gap-3">
+              <span className="text-primary">✓</span> Seamless Traditional Process
+            </li>
           </ul>
         </div>
 
-        <div className="p-6 border rounded-lg shadow-sm text-center">
-          <h2 className="text-xl font-semibold text-rose-700 mb-4">
+        <div className="p-10 bg-primary rounded-[2.5rem] text-center text-white">
+          <div className="w-16 h-16 bg-primary-light rounded-full flex items-center justify-center text-2xl mx-auto mb-6">
+            🤝
+          </div>
+          <h2 className="text-2xl font-bold mb-4">
             Need Guidance?
           </h2>
-          <p className="text-gray-600 mb-6">
-            We ensure privacy and respectful handling
-            of every situation.
+          <p className="text-[#D1D9D3] mb-8 text-lg">
+            We ensure complete privacy and handle every family situation with the utmost respect and care.
           </p>
-
-          <a
+          <Link
             href="/contact"
-            className="bg-rose-700 text-white px-6 py-3 rounded-lg hover:bg-rose-800 transition"
+            className="inline-block bg-[#F9F8F6] text-primary px-8 py-4 rounded-full font-bold hover:bg-surface transition-colors"
           >
-            Contact for Consultation
-          </a>
+            Book a Confidential Consultation
+          </Link>
         </div>
 
       </div>
-
     </div>
   );
 }

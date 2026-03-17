@@ -1,25 +1,29 @@
+import Link from "next/link";
+
 export default function ThankYou() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-rose-50 px-6">
+    <div className="min-h-[80vh] flex items-center justify-center px-6 pt-20">
 
-      <div className="bg-white shadow-xl rounded-xl p-10 max-w-lg text-center">
+      <div className="bg-surface rounded-[3rem] p-12 max-w-lg text-center w-full">
+        
+        <div className="w-20 h-20 bg-primary text-[#F9F8F6] rounded-full flex items-center justify-center text-4xl mx-auto mb-8">
+          ✓
+        </div>
 
-        <h1 className="text-3xl font-bold text-rose-800 mb-4">
-          Thank You 🙏
+        <h1 className="text-3xl md:text-4xl font-bold text-main mb-4">
+          Thank You
         </h1>
 
-        <p className="text-gray-700 mb-6">
-          Your registration has been received successfully.
-          Our team will verify your details and contact you shortly.
+        <p className="text-muted text-lg mb-10 leading-relaxed">
+          Your registration has been received successfully. Our matchmaking team will review your details and contact you shortly.
         </p>
 
-        <a
-          href="http://localhost:3000/thank-you
-"
-          className="inline-block bg-rose-700 text-white px-6 py-2 rounded-lg hover:bg-rose-800 transition"
+        <Link
+          href="/"
+          className="inline-block bg-primary text-white px-8 py-4 rounded-full font-bold hover:bg-primary-hover transition-colors"
         >
-          Back to Home
-        </a>
+          Return to Home
+        </Link>
 
       </div>
 
