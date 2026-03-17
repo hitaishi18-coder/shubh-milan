@@ -1,30 +1,94 @@
 @import "tailwindcss";
 
+/* Material 3 "Sage & Warm Sand" Theme Variables
+*/
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Backgrounds & Surfaces */
+  --bg-base: #F9F8F6;          /* Ivory / Main Background */
+  --bg-surface: #EBE9E1;       /* Warm Sand / Tonal Surface */
+  --bg-surface-hover: #DFDDD3; /* Slightly darker sand for hover states */
+  
+  /* Primary Brand (Sage Green) */
+  --primary: #4A5D4E;          
+  --primary-hover: #3A493D;
+  --primary-light: #5C7060;
+  
+  /* Accent (Warm Gold/Sand) */
+  --accent: #D9CDBF;
+  --accent-hover: #CABAAB;
+
+  /* Typography */
+  --text-main: #2C2C2C;        /* Charcoal (Softer than pure black) */
+  --text-muted: #595959;       /* Medium Gray/Green */
+  --text-light: #A3A3A3;       /* Light Gray */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
+/* Optional: Dark Mode Support 
+  (Deep forest greens and dark charcoals to maintain the premium vibe)
+*/
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --bg-base: #1A1F1C;
+    --bg-surface: #242A26;
+    --bg-surface-hover: #2F3631;
+    
+    --primary: #86A78D;
+    --primary-hover: #9EBEA4;
+    --primary-light: #5C7060;
+    
+    --text-main: #F9F8F6;
+    --text-muted: #A1ACA4;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Injecting custom colors into Tailwind v4 
+  This allows you to use classes like `bg-primary`, `text-muted`, etc.
+*/
+@theme inline {
+  /* Map standard background/foreground to our theme */
+  --color-background: var(--bg-base);
+  --color-foreground: var(--text-main);
+  
+  /* Map Custom Colors */
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-light: var(--primary-light);
+  
+  --color-surface: var(--bg-surface);
+  --color-surface-hover: var(--bg-surface-hover);
+  
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  
+  --color-text-main: var(--text-main);
+  --color-text-muted: var(--text-muted);
+
+  /* Typography mapping */
+  --font-sans: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  --font-mono: var(--font-geist-mono);
 }
 
+/* Base HTML/Body adjustments */
+body {
+  background-color: var(--bg-base);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Material 3 Global Selection Color (When a user highlights text) */
+::selection {
+  background-color: var(--primary-light);
+  color: #ffffff;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Preserving your custom animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -37,5 +101,5 @@ body {
 }
 
 .animate-fadeIn {
-  animation: fadeIn 0.3s ease-in-out;
+  animation: fadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }

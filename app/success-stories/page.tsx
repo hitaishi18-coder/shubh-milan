@@ -8,34 +8,36 @@ export const metadata: Metadata = {
 
 export default function SuccessStories() {
   return (
-    <div className="max-w-6xl mx-auto px-6 py-16">
+    <div className="max-w-6xl mx-auto px-6 pt-32 pb-16">
 
-      <h1 className="text-4xl font-bold text-rose-800 mb-10 text-center">
-        Matrimonial Success Stories
-      </h1>
+      <div className="text-center mb-16">
+        <h1 className="text-4xl md:text-5xl font-bold text-main mb-6">
+          Stories of Togetherness
+        </h1>
+        <p className="text-muted text-lg mb-12 max-w-2xl mx-auto">
+          Every successful match strengthens our belief in trust, compatibility, and family values. Here are a few words from the families we&apos;ve brought together.
+        </p>
+      </div>
 
-      <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-        Every successful match strengthens our belief in
-        trust, compatibility and family values.
-      </p>
+      <div className="grid md:grid-cols-2 gap-8">
 
-      <div className="grid md:grid-cols-2 gap-10">
-
-        <div className="border rounded-lg shadow-sm p-8">
-          <h2 className="text-xl font-semibold text-rose-700 mb-4">
+        <div className="bg-surface rounded-[2.5rem] p-10 hover:bg-surface-hover transition-colors relative">
+          <span className="text-6xl text-accent absolute top-6 right-8 opacity-50 font-serif">&quot;</span>
+          <h2 className="text-2xl font-bold text-main mb-4 relative z-10">
             Rohit & Priya
           </h2>
-          <p className="text-gray-600">
-            Shubh Milan guided our families with patience and transparency.
+          <p className="text-muted text-lg leading-relaxed relative z-10">
+            &quot;Shubh Milan guided our families with incredible patience and transparency. They didn&apos;t just look at basic criteria, they really understood our family&apos;s vibe.&quot;
           </p>
         </div>
 
-        <div className="border rounded-lg shadow-sm p-8">
-          <h2 className="text-xl font-semibold text-rose-700 mb-4">
+        <div className="bg-surface rounded-[2.5rem] p-10 hover:bg-surface-hover transition-colors relative">
+          <span className="text-6xl text-accent absolute top-6 right-8 opacity-50 font-serif">&quot;</span>
+          <h2 className="text-2xl font-bold text-main mb-4 relative z-10">
             Aman & Simran
           </h2>
-          <p className="text-gray-600">
-            The verification process gave our families confidence.
+          <p className="text-muted text-lg leading-relaxed relative z-10">
+            &quot;The manual verification process gave our parents so much confidence. We felt safe and respected throughout the entire matchmaking journey.&quot;
           </p>
         </div>
 

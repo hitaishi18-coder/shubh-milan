@@ -8,28 +8,31 @@ export const metadata: Metadata = {
 
 export default function RegistrationForm() {
   return (
-    <div className="max-w-6xl mx-auto px-6 py-16">
+    <div className="max-w-5xl mx-auto px-6 pt-32 pb-16">
 
-      <div className="text-center mb-10">
-        <h1 className="text-4xl font-bold text-rose-800">
-          Matrimonial Registration Form
+      <div className="text-center mb-12">
+        <h1 className="text-4xl md:text-5xl font-bold text-main mb-4">
+          Profile Registration
         </h1>
-
-        <p className="text-gray-700 mt-4">
-          Please complete the form below. Our team will contact you shortly.
+        <p className="text-muted text-lg max-w-2xl mx-auto">
+          Please complete the form below accurately. All information is kept strictly confidential and is only used to find your perfect match.
         </p>
       </div>
 
-      <div className="w-full rounded-xl overflow-hidden shadow-xl border bg-white">
-        <iframe
-          src="https://docs.google.com/forms/d/e/1FAIpQLSdHDfM4t47hrqY4d5vxAubM_UA6sZLbjTmHjg60r4MhySI3vw/viewform?embedded=true"
-          width="100%"
-          height="900"
-          style={{ border: "0" }}
-          loading="lazy"
-        >
-          Loading…
-        </iframe>
+      {/* Wrapping the form in a soft Material 3 tonal container */}
+      <div className="w-full bg-surface rounded-[2.5rem] p-4 md:p-8">
+        <div className="rounded-3xl overflow-hidden bg-white">
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSdHDfM4t47hrqY4d5vxAubM_UA6sZLbjTmHjg60r4MhySI3vw/viewform?embedded=true"
+            width="100%"
+            height="900"
+            style={{ border: "0" }}
+            loading="lazy"
+            title="Registration Form"
+          >
+            Loading…
+          </iframe>
+        </div>
       </div>
 
     </div>
