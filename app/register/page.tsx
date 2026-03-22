@@ -63,7 +63,7 @@ export default function Register() {
         <div className="lg:col-span-7 w-full bg-surface rounded-[2.5rem] p-3 md:p-6 shadow-sm border border-[#EBE9E1]">
           <div className="rounded-[1.5rem] overflow-hidden bg-white">
             <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSdHDfM4t47hrqY4d5vxAubM_UA6sZLbjTmHjg60r4MhySI3vw/viewform?embedded=true"
+              src="https://docs.google.com/forms/d/e/1FAIpQLScredwKGkJxE_TCukto8Yj9E0QwveR9s3EvR1Yk6niKMY38tg/viewform?embedded=true"
               width="100%"
               height="1100"
               style={{ border: "0" }}
