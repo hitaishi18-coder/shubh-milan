@@ -31,13 +31,16 @@ export default function Footer() {
           <h3 className="text-lg font-semibold mb-6 text-white">Contact Us</h3>
           <div className="space-y-4 text-[#D1D9D3]">
             <p className="flex items-center gap-3">
-              <span className="text-xl">📞</span> +91-XXXXXXXXXX
+              <span className="text-xl">📞</span> +91-6283713136
             </p>
             <p className="flex items-center gap-3">
               <span className="text-xl">📍</span> Amritsar & Nearby Areas
             </p>
             <p className="flex items-center gap-3">
-              <span className="text-xl">✉️</span> info@shubhmilan.com
+              <span className="text-xl">✉️</span> shubhmilan164@gmail.com
+            </p>
+            <p className="flex items-center gap-3">
+              <span className="text-xl"> 🅾 </span> ....
             </p>
           </div>
         </div>

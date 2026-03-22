@@ -28,15 +28,15 @@ export default function Contact() {
           <div className="space-y-6 text-lg">
             <p className="flex items-center gap-4 text-muted">
               <span className="w-12 h-12 bg-[#F9F8F6] rounded-full flex items-center justify-center text-primary">📞</span> 
-              +91-XXXXXXXXXX
+              +91-6283713136
             </p>
             <p className="flex items-center gap-4 text-muted">
               <span className="w-12 h-12 bg-[#F9F8F6] rounded-full flex items-center justify-center text-primary">💬</span> 
-              +91-XXXXXXXXXX (WhatsApp)
+              +91-6283713136 (WhatsApp)
             </p>
             <p className="flex items-center gap-4 text-muted">
               <span className="w-12 h-12 bg-[#F9F8F6] rounded-full flex items-center justify-center text-primary">📧</span> 
-              info@shubhmilan.com
+              ishubhmilan164@gmail.com
             </p>
             <p className="flex items-center gap-4 text-muted">
               <span className="w-12 h-12 bg-[#F9F8F6] rounded-full flex items-center justify-center text-primary">📍</span> 
