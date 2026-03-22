@@ -23,7 +23,7 @@ export default function RegistrationForm() {
       <div className="w-full bg-surface rounded-[2.5rem] p-4 md:p-8">
         <div className="rounded-3xl overflow-hidden bg-white">
           <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSddgEyQ5pxKPQdheNz8Zdd1SzodwKWKblMMOhU7FSNXiLYkTw/viewform?usp=dialog"
+            src="https://docs.google.com/forms/d/e/1FAIpQLScredwKGkJxE_TCukto8Yj9E0QwveR9s3EvR1Yk6niKMY38tg/viewform?embedded=true"
             width="100%"
             height="900"
             style={{ border: "0" }}

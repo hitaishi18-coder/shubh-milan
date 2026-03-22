@@ -75,7 +75,7 @@ export default function Register() {
         <FadeIn delay={0.3} className="lg:col-span-7 w-full bg-surface rounded-[3rem] p-3 md:p-6 shadow-sm border border-[#EBE9E1]">
           <div className="rounded-[2.5rem] overflow-hidden bg-white shadow-inner">
             <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSddgEyQ5pxKPQdheNz8Zdd1SzodwKWKblMMOhU7FSNXiLYkTw/viewform?usp=dialog"
+              src="https://docs.google.com/forms/d/e/1FAIpQLScredwKGkJxE_TCukto8Yj9E0QwveR9s3EvR1Yk6niKMY38tg/viewform?embedded=true"
               width="100%"
               height="1100"
               style={{ border: "0" }}
